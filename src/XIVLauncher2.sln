@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XIVLauncher2", "XIVLauncher2\XIVLauncher2.csproj", "{92F61103-FC83-48D6-8678-B1DDD1B8BEEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XIVLauncher2.Common", "XIVLauncher2.Common\XIVLauncher2.Common.csproj", "{C7DC3CBB-CFFA-4FFA-93CB-16ED892430EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92F61103-FC83-48D6-8678-B1DDD1B8BEEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F61103-FC83-48D6-8678-B1DDD1B8BEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F61103-FC83-48D6-8678-B1DDD1B8BEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F61103-FC83-48D6-8678-B1DDD1B8BEEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7DC3CBB-CFFA-4FFA-93CB-16ED892430EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7DC3CBB-CFFA-4FFA-93CB-16ED892430EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7DC3CBB-CFFA-4FFA-93CB-16ED892430EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7DC3CBB-CFFA-4FFA-93CB-16ED892430EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
