@@ -1,0 +1,19 @@
+{
+    "dockerFile": "Dockerfile",
+    "updateRemoteUserUID": true,
+    "containerUser": "dev",
+    "remoteUser": "dev",
+    "workspaceMount": "",
+    "runArgs": [
+        "--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csharp",
+                "tintoy.msbuild-project-tools",
+                "kreativ-software.csharpextensions"
+            ]
+        }
+    }
+}
