@@ -65,9 +65,9 @@
                     <!-- Buttons -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                                 Spacing="5">
-                        <Button i:Attached.Icon="fa-play" Height="40" Width="40" FontSize="20" />
-                        <Button i:Attached.Icon="fa-user-group" Height="40" Width="40" FontSize="20" />
-                        <Button i:Attached.Icon="fa-cog" Height="40" Width="40" FontSize="20" />
+                        <Button i:Attached.Icon="fa-play" ToolTip.Tip="Play" Height="40" Width="40" FontSize="20" />
+                        <Button i:Attached.Icon="fa-user-group" ToolTip.Tip="Accounts" Height="40" Width="40" FontSize="20" />
+                        <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" Height="40" Width="40" FontSize="20" />
                     </StackPanel>
                 </StackPanel>
             </Border>
