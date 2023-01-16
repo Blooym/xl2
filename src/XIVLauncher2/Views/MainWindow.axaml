@@ -3,17 +3,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
+        xmlns:vm="using:XIVLauncher2.ViewModels"
         mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="500"
         x:Class="XIVLauncher2.MainWindow"
         Title="XIVLauncher2"
         Width="1000" Height="500"
         MinWidth="1000" MinHeight="500"
-        MaxWidth="1280" MaxHeight="800"
         WindowStartupLocation="CenterScreen"
         TransparencyLevelHint="AcrylicBlur"
         Background="Transparent"
         ExtendClientAreaToDecorationsHint="False">
-
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+    
     <ExperimentalAcrylicBorder Padding="10">
         <ExperimentalAcrylicBorder.Material>
             <ExperimentalAcrylicMaterial BackgroundSource="Digger" TintOpacity="1" TintColor="Black"
@@ -49,8 +52,8 @@
                     Grid.Column="1">
                     <StackPanel Width="250" Spacing="10" VerticalAlignment="Center">
                         <!-- Placeholder logo text -->
-                        <TextBlock Text="XIVLauncher" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" />
-
+                        <TextBlock Text="{Binding XIVLauncherText}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" />
+                        
                         <!-- Text boxes -->
                         <TextBox Watermark="ID"></TextBox>
                         <TextBox Watermark="Password" PasswordChar="*"></TextBox>
@@ -65,9 +68,12 @@
                         <!-- Buttons -->
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                                     Spacing="5">
-                            <Button i:Attached.Icon="fa-play" ToolTip.Tip="Play" Height="40" Width="40" FontSize="20" Background="#1e88e5" />
-                            <Button i:Attached.Icon="fa-user-group" ToolTip.Tip="Accounts" Height="40" Width="40" FontSize="20" />
-                            <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" Height="40" Width="40" FontSize="20" />
+                            <Button i:Attached.Icon="fa-play" ToolTip.Tip="Play" Height="40" Width="40" FontSize="20"
+                                    Background="#1e88e5" Command="{Binding RunTheThingCommand}" />
+                            <Button i:Attached.Icon="fa-user-group" ToolTip.Tip="Accounts" Height="40" Width="40"
+                                    FontSize="20" />
+                            <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" Height="40" Width="40"
+                                    FontSize="20" />
                         </StackPanel>
                     </StackPanel>
                 </Border>
