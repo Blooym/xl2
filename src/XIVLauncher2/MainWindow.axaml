@@ -11,7 +11,7 @@
         WindowStartupLocation="CenterScreen"
         TransparencyLevelHint="AcrylicBlur"
         Background="Transparent"
-        ExtendClientAreaToDecorationsHint="True">
+        ExtendClientAreaToDecorationsHint="False">
 
     <ExperimentalAcrylicBorder Padding="10">
         <ExperimentalAcrylicBorder.Material>
