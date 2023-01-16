@@ -2,6 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
         mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="500"
         x:Class="XIVLauncher2.MainWindow"
         Title="XIVLauncher2"
@@ -15,7 +16,8 @@
 
     <ExperimentalAcrylicBorder Padding="10">
         <ExperimentalAcrylicBorder.Material>
-            <ExperimentalAcrylicMaterial BackgroundSource="Digger" TintOpacity="1" TintColor="Black" MaterialOpacity="0.75" FallbackColor="DarkBlue"/>
+            <ExperimentalAcrylicMaterial BackgroundSource="Digger" TintOpacity="1" TintColor="Black"
+                                         MaterialOpacity="0.75" FallbackColor="DarkBlue" />
         </ExperimentalAcrylicBorder.Material>
         <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
@@ -40,11 +42,11 @@
 
             <!-- Login -->
             <Border
-                    Background="#282828"
-                    CornerRadius="5"
-                    Margin="20,0,0,0"
-                    Padding="10"
-                    Grid.Column="1">
+                Background="#282828"
+                CornerRadius="5"
+                Margin="20,0,0,0"
+                Padding="10"
+                Grid.Column="1">
                 <StackPanel Width="250" Spacing="10" VerticalAlignment="Center">
                     <!-- Placeholder logo text -->
                     <TextBlock Text="XIVLauncher" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" />
@@ -61,9 +63,11 @@
                     </StackPanel>
 
                     <!-- Buttons -->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
-                        <Button>Play</Button>
-                        <Button>Accounts</Button>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Spacing="5">
+                        <Button i:Attached.Icon="fa-play" Height="40" Width="40" FontSize="20" />
+                        <Button i:Attached.Icon="fa-user-group" Height="40" Width="40" FontSize="20" />
+                        <Button i:Attached.Icon="fa-cog" Height="40" Width="40" FontSize="20" />
                     </StackPanel>
                 </StackPanel>
             </Border>
