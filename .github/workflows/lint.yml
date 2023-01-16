@@ -6,7 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: zyactions/dotnet-lint@v1
+        
+      - uses: actions/setup-dotnet@v1
         with:
-          workspace: src
-          implicit-restore: true
+          dotnet-version: 7.0.x
+
+      - uses: wearerequired/lint-action@v2
+        with:
+          dotnet_format: true
