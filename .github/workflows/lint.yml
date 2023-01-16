@@ -1,0 +1,21 @@
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+
+      - uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          FILTER_REGEX_INCLUDE: .*src/.*.cs
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
