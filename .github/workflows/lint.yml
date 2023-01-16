@@ -14,7 +14,7 @@ jobs:
           dotnet-version: 7.0.x
 
       - uses: github/super-linter@v4
-        with:
+        env:
             VALIDATE_ALL_CODEBASE: false
             DEFAULT_BRANCH: main
             FILTER_REGEX_INCLUDE: .*src/.*.cs
