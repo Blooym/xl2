@@ -48,8 +48,8 @@
                     Margin="20,0,0,0"
                     Padding="5">
                 <StackPanel Width="250" Spacing="10" VerticalAlignment="Center">
-                    <TextBox>ID</TextBox>
-                    <TextBox>Password</TextBox>
+                    <TextBox Watermark="ID"></TextBox>
+                    <TextBox Watermark="Password" PasswordChar="*"></TextBox>
 
                     <StackPanel HorizontalAlignment="Center">
                         <CheckBox>Log in automatically</CheckBox>
