@@ -18,6 +18,10 @@
             <ExperimentalAcrylicMaterial BackgroundSource="Digger" TintOpacity="1" TintColor="Black" MaterialOpacity="0.75" FallbackColor="DarkBlue"/>
         </ExperimentalAcrylicBorder.Material>
         <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
             <!--- News and Links -->
             <StackPanel Grid.Column="0" Spacing="5">
