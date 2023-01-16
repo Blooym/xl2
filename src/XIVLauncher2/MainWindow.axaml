@@ -5,12 +5,18 @@
         mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="500"
         x:Class="XIVLauncher2.MainWindow"
         Title="XIVLauncher2"
-
+        Width="1000" Height="500"
+        MinWidth="1000" MinHeight="500"
+        MaxWidth="1280" MaxHeight="800"
         WindowStartupLocation="CenterScreen"
         TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent">
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True">
 
-    <Border Padding="10">
+    <ExperimentalAcrylicBorder Padding="10">
+        <ExperimentalAcrylicBorder.Material>
+            <ExperimentalAcrylicMaterial BackgroundSource="Digger" TintOpacity="1" TintColor="Black" MaterialOpacity="0.75" FallbackColor="DarkBlue"/>
+        </ExperimentalAcrylicBorder.Material>
         <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -70,5 +76,5 @@
                 </TextBlock>
             </Border>
         </Grid>
-    </Border>
+    </ExperimentalAcrylicBorder>
 </Window>
