@@ -1,0 +1,12 @@
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: zyactions/dotnet-lint@v1
+        with:
+          workspace: src
+          implicit-restore: true
