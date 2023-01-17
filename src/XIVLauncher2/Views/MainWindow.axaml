@@ -22,13 +22,18 @@
             <ExperimentalAcrylicMaterial BackgroundSource="Digger" TintOpacity="1" TintColor="Black"
                                          MaterialOpacity="0.75" FallbackColor="DarkBlue" />
         </ExperimentalAcrylicBorder.Material>
-
-        <ContentPresenter Content="{Binding}" DataContext="{Binding Content}">
-            <ContentPresenter.DataTemplates>
-                <DataTemplate DataType="{x:Type vm:LauncherViewModel}">
-                    <views:LauncherView DataContext="{Binding}" />
-                </DataTemplate>
-            </ContentPresenter.DataTemplates>
-        </ContentPresenter>
+        
+        <Viewbox>
+            <ContentPresenter Content="{Binding}" DataContext="{Binding Content}">
+                <ContentPresenter.DataTemplates>
+                        <DataTemplate DataType="{x:Type vm:LauncherViewModel}">
+                            <views:LauncherView DataContext="{Binding}" />
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+                            <views:SettingsView DataContext="{Binding}" />
+                        </DataTemplate>
+                </ContentPresenter.DataTemplates>
+            </ContentPresenter>
+        </Viewbox>
     </ExperimentalAcrylicBorder>
 </Window>

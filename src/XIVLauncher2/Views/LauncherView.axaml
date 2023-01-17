@@ -59,8 +59,8 @@
                             Background="#1e88e5" Command="{Binding RunTheThingCommand}" />
                     <Button i:Attached.Icon="fa-user-group" ToolTip.Tip="Accounts" Height="40" Width="40"
                             FontSize="20" />
-                    <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" Height="40" Width="40"
-                            FontSize="20" />
+                    <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" Height="40" Width="40" FontSize="20"
+                            Command="{Binding }" />
                 </StackPanel>
             </StackPanel>
         </Border>
