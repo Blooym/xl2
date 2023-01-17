@@ -28,7 +28,7 @@
                 </ListBox>
             </Border>
         </StackPanel>
-
+        
         <!-- Login -->
         <Border
             Background="#282828"
@@ -43,7 +43,7 @@
 
                 <!-- Text boxes -->
                 <TextBox Watermark="ID" />
-                <TextBox Watermark="Password" PasswordChar="*"></TextBox>
+                <TextBox Watermark="Password" PasswordChar="*" />
 
                 <!-- Checkboxes -->
                 <StackPanel HorizontalAlignment="Center">
@@ -56,7 +56,15 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                             Spacing="5">
                     <SplitButton i:Attached.Icon="fa-play" ToolTip.Tip="Play" FontSize="20"
-                                 Background="#1e88e5"/>
+                                 Background="#1e88e5">
+                        <SplitButton.Flyout>
+                            <MenuFlyout Placement="Bottom">
+                                <MenuItem Header="Launch without Dalamud" />
+                                <MenuItem Header="Launch without 3rd-party plugins" />
+                                <MenuItem Header="Launch and Repair Game" />
+                            </MenuFlyout>
+                        </SplitButton.Flyout>
+                    </SplitButton>
                     <Button i:Attached.Icon="fa-user-group" ToolTip.Tip="Accounts"
                             FontSize="20" />
                     <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" FontSize="20" />
