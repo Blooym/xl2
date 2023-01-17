@@ -42,7 +42,7 @@
                            HorizontalAlignment="Center" />
 
                 <!-- Text boxes -->
-                <TextBox Watermark="ID"></TextBox>
+                <TextBox Watermark="ID" />
                 <TextBox Watermark="Password" PasswordChar="*"></TextBox>
 
                 <!-- Checkboxes -->
@@ -55,12 +55,11 @@
                 <!-- Buttons -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
                             Spacing="5">
-                    <Button i:Attached.Icon="fa-play" ToolTip.Tip="Play" Height="40" Width="40" FontSize="20"
-                            Background="#1e88e5" Command="{Binding RunTheThingCommand}" />
-                    <Button i:Attached.Icon="fa-user-group" ToolTip.Tip="Accounts" Height="40" Width="40"
+                    <SplitButton i:Attached.Icon="fa-play" ToolTip.Tip="Play" FontSize="20"
+                                 Background="#1e88e5"/>
+                    <Button i:Attached.Icon="fa-user-group" ToolTip.Tip="Accounts"
                             FontSize="20" />
-                    <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" Height="40" Width="40" FontSize="20"
-                            Command="{Binding }" />
+                    <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" FontSize="20" />
                 </StackPanel>
             </StackPanel>
         </Border>

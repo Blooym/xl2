@@ -5,8 +5,8 @@
     <Application.DataTemplates>
         <xivLauncher2:ViewLocator />
     </Application.DataTemplates>
-
+    
     <Application.Styles>
-        <FluentTheme Mode="Dark" />
+        <FluentTheme Mode="Dark"/>
     </Application.Styles>
 </Application>
