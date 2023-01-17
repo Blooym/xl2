@@ -3,10 +3,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
+             xmlns:vm="using:XIVLauncher2.ViewModels"
              mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="500"
              x:Class="XIVLauncher2.Views.LauncherView">
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" ColumnDefinitions="Auto, Auto">
+    <Design.DataContext>
+        <vm:LauncherViewModel />
+    </Design.DataContext>
 
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" ColumnDefinitions="Auto, Auto">
         <!--- News and Links -->
         <StackPanel Grid.Column="0">
             <!-- News Images -->
