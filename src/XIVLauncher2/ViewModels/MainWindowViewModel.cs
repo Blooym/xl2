@@ -1,17 +1,18 @@
-﻿using System.Reactive;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace XIVLauncher2.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    [ObservableProperty]
-    private string _XIVLauncherText = "XIVLauncher";
+    [ObservableProperty] 
+    public ViewModelBase _Content;
+    
+    public LauncherViewModel LauncherViewModel { get; }
 
-    [RelayCommand]
-    private void RunTheThing()
+    public MainWindowViewModel()
     {
-        this.XIVLauncherText = "XIVLauncher TWO";
+        //this.Content = this.LauncherViewModel = new LauncherViewModel();
+        this.LauncherViewModel = new LauncherViewModel();
+        this.Content = this.LauncherViewModel;
     }
 }

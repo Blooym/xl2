@@ -16,15 +16,19 @@
     <Design.DataContext>
         <vm:MainWindowViewModel />
     </Design.DataContext>
-    
+
     <ExperimentalAcrylicBorder Padding="10">
         <ExperimentalAcrylicBorder.Material>
             <ExperimentalAcrylicMaterial BackgroundSource="Digger" TintOpacity="1" TintColor="Black"
                                          MaterialOpacity="0.75" FallbackColor="DarkBlue" />
         </ExperimentalAcrylicBorder.Material>
-        
-        <Viewbox>
-            <views:LauncherView />
-        </Viewbox>
+
+        <ContentPresenter DataContext="{Binding Content}">
+            <ContentPresenter.DataTemplates>
+                <DataTemplate DataType="{x:Type vm:LauncherViewModel}">
+                    <views:LauncherView DataContext="{Binding}" />
+                </DataTemplate>
+            </ContentPresenter.DataTemplates>
+        </ContentPresenter>
     </ExperimentalAcrylicBorder>
 </Window>
