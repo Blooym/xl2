@@ -17,8 +17,8 @@
             <Image Source="/Assets/placeholder-news.png" Stretch="UniformToFill" Width="640" Height="250" />
 
             <!-- News Links -->
-            <Border Background="#282828" CornerRadius="5" Margin="0,20,0,0">
-                <ListBox MaxHeight="150" VirtualizationMode="None">
+            <Border Background="Transparent" CornerRadius="5" Margin="0,20,0,0">
+                <ListBox MaxHeight="150" VirtualizationMode="None" Background="#20000000">
                     <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">News</TextBlock>
                     <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">News</TextBlock>
                     <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">News</TextBlock>
@@ -31,7 +31,7 @@
 
         <!-- Login -->
         <Border
-            Background="#282828"
+            Background="#20000000"
             CornerRadius="5"
             Margin="20,0,0,0"
             Padding="10"
