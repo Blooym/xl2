@@ -9,7 +9,6 @@ public partial class LauncherViewModel : ViewModelBase
     [RelayCommand]
     public void NavigateToSettings()
     {
-        // TODO: This is totally wrong for navigation as we use memory on every navigation.
-        WeakReferenceMessenger.Default.Send(new MainViewChangedMessage(new SettingsViewModel()));
+        WeakReferenceMessenger.Default.Send(new NavigationMessage((NavigationChange.Settings)));
     }
 }

@@ -14,12 +14,20 @@ public partial class MainWindowViewModel : ViewModelBase
 
     public MainWindowViewModel()
     {
-        Content = LauncherViewModel;
-        
-        // https://learn.microsoft.com/en-us/windows/communitytoolkit/mvvm/messenger#how-it-works
-        WeakReferenceMessenger.Default.Register<MainViewChangedMessage>(this, (r, m) =>
+        this.Content = LauncherViewModel;
+        WeakReferenceMessenger.Default.Register<NavigationMessage>(this, (_, m) => this.HandleNavigationMessage(m));
+    }
+    
+    private void HandleNavigationMessage(NavigationMessage message)
+    {
+        switch (message.Value)
         {
-            Content = m.Value;
-        });
+            case NavigationChange.Launcher:
+                this.Content = LauncherViewModel;
+                break;
+            case  NavigationChange.Settings:
+                this.Content = SettingsViewModel;
+                break;
+        }
     }
 }

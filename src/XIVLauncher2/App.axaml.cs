@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using XIVLauncher2.ViewModels;
+using XIVLauncher2.Views;
 
 namespace XIVLauncher2;
 

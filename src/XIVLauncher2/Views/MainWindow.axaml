@@ -5,7 +5,7 @@
         xmlns:vm="using:XIVLauncher2.ViewModels"
         xmlns:views="clr-namespace:XIVLauncher2.Views"
         mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="500"
-        x:Class="XIVLauncher2.MainWindow"
+        x:Class="XIVLauncher2.Views.MainWindow"
         Title="XIVLauncher2"
         Width="1000" Height="500"
         MinWidth="1000" MinHeight="500"
