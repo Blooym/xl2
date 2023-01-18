@@ -38,7 +38,7 @@
             Grid.Column="1">
             <StackPanel Width="250" Spacing="10" VerticalAlignment="Center">
                 <!-- Placeholder logo text -->
-                <TextBlock Text="{Binding XIVLauncherText}" FontSize="24" FontWeight="Bold"
+                <TextBlock Text="XIVLauncher" FontSize="24" FontWeight="Bold"
                            HorizontalAlignment="Center" />
 
                 <!-- Text boxes -->
@@ -67,7 +67,8 @@
                     </SplitButton>
                     <Button i:Attached.Icon="fa-user-group" ToolTip.Tip="Accounts"
                             FontSize="20" />
-                    <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" FontSize="20" />
+                    <Button i:Attached.Icon="fa-cog" ToolTip.Tip="Settings" FontSize="20"
+                            Command="{Binding NavigateToSettings}" />
                 </StackPanel>
             </StackPanel>
         </Border>

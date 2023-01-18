@@ -1,16 +1,14 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
+using XIVLauncher2.Messengers;
 
 namespace XIVLauncher2.ViewModels;
 
 public partial class LauncherViewModel : ViewModelBase
 {
-    [ObservableProperty]
-    private string _XIVLauncherText = "XIVLauncher";
-    
     [RelayCommand]
-    private void RunTheThing()
+    public void NavigateToSettings()
     {
-        this.XIVLauncherText = "XIVLauncher TWO";
+        WeakReferenceMessenger.Default.Send(new NavigationMessage((NavigationChange.Settings)));
     }
 }

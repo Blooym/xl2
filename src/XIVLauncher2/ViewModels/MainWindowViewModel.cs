@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
+using XIVLauncher2.Messengers;
 
 namespace XIVLauncher2.ViewModels;
 
@@ -13,18 +14,20 @@ public partial class MainWindowViewModel : ViewModelBase
 
     public MainWindowViewModel()
     {
-        Content = LauncherViewModel;
+        this.Content = LauncherViewModel;
+        WeakReferenceMessenger.Default.Register<NavigationMessage>(this, (_, m) => this.HandleNavigationMessage(m));
     }
-
-    [RelayCommand]
-    private void NavigateToSettingsCommand()
+    
+    private void HandleNavigationMessage(NavigationMessage message)
     {
-        this.Content = this.SettingsViewModel;   
-    }
-
-    [RelayCommand]
-    private void NavigateToLauncherCommand()
-    {
-        this.Content = this.SettingsViewModel;   
+        switch (message.Value)
+        {
+            case NavigationChange.Launcher:
+                this.Content = LauncherViewModel;
+                break;
+            case  NavigationChange.Settings:
+                this.Content = SettingsViewModel;
+                break;
+        }
     }
 }
