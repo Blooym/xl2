@@ -23,7 +23,7 @@
                                          MaterialOpacity="0.75" FallbackColor="DarkBlue" />
         </ExperimentalAcrylicBorder.Material>
         
-        <Viewbox>
+        <Viewbox VerticalAlignment="Top">
             <ContentPresenter Content="{Binding}" DataContext="{Binding Content}">
                 <ContentPresenter.DataTemplates>
                         <DataTemplate DataType="{x:Type vm:LauncherViewModel}">

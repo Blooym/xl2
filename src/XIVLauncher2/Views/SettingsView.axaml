@@ -9,6 +9,31 @@
         <vm:SettingsViewModel />
     </Design.DataContext>
     
-    <Button Command="{Binding NavigateToLauncher}">Back to Launcher</Button>
+    <!-- https://docs.avaloniaui.net/docs/controls/tabcontrol -->
+    <!-- We can programmatically generate what items to show here with a binding -->
+    <!-- Theming must be applied to a wrap panel if it should only apply to the header -->
+    <Grid RowDefinitions="Auto">
+        <!-- Top Row -->
+        <TabControl Grid.Row="0">
+            <TabItem Header="Game">
+                <TextBlock Text="q" />
+            </TabItem>
+            <TabItem Header="Patching">
+                <TextBlock Text="a" />
+            </TabItem>
+            <TabItem Header="Wine">
+                <TextBlock Text="b" />
+            </TabItem>
+            <TabItem Header="Dalamud">
+                <TextBlock Text="c" />
+            </TabItem>
+            <TabItem Header="Auto-Start">
+                <TextBlock Text="d" />
+            </TabItem>
+            <TabItem Header="Debug">
+                <TextBlock Text="e" />
+            </TabItem>
+        </TabControl>
+    </Grid>
 </UserControl>
 

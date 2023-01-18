@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Messaging;
 using XIVLauncher2.Messengers;
 
@@ -20,14 +21,11 @@ public partial class MainWindowViewModel : ViewModelBase
     
     private void HandleNavigationMessage(NavigationMessage message)
     {
-        switch (message.Value)
+        this.Content = message.Value switch
         {
-            case NavigationChange.Launcher:
-                this.Content = LauncherViewModel;
-                break;
-            case  NavigationChange.Settings:
-                this.Content = SettingsViewModel;
-                break;
-        }
+            NavigationChange.Launcher => LauncherViewModel,
+            NavigationChange.Settings => SettingsViewModel,
+            _ => throw new ArgumentOutOfRangeException(nameof(message.Value))
+        };
     }
 }
